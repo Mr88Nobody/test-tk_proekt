@@ -1,0 +1,197 @@
+@import "../global/variables";
+
+// Блог оформления заказа
+.content-order {
+  padding: 40px 20px;
+  background: url("../img/layer-13.png") no-repeat center;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 10%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 120px 359px 147px 375px;
+  }
+}
+
+// Заголовок
+
+.content-order__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  margin: 0;
+  margin-bottom: 18px;
+
+  & span {
+    color: $blue;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 19px;
+  }
+}
+
+// Текст после заголовка
+.content-order__text {
+  font-size: 16px;
+  line-height: 20px;
+  color: $grey;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+// Схема оформления заказа
+.content-order__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+
+  @media (min-widht: $tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {    
+    margin: 80px 0 76px 0;
+    flex-wrap: nowrap;
+  }
+}
+
+
+.content-order__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 20%;
+  }
+
+  @media (min-width: $desktop-width) {   
+  }
+}
+
+// Декоративные элементы
+.content-order__icon {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: $blue;
+  border: 3px solid $border-blue;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 20px;
+    height: 20px;    
+  }
+
+  &--search::before {
+    background: url("../img/1.png") no-repeat center;
+    background-size: 20px 20px;
+  }
+
+  &--percent::before {
+    background: url("../img/2.png") no-repeat center;
+    background-size: 20px 20px;
+  }
+
+  &--page::before {
+    background: url("../img/3.png") no-repeat center;
+    background-size: 15px 20px;
+    width: 15px;
+    width: 20px;
+  }
+
+  &--email::before {
+    background: url("../img/4.png") no-repeat center;
+    background-size: 20px 15px;
+    width: 20px;
+    height: 15px;
+  }
+
+  &--pay::before {
+    background: url("../img/5.png") no-repeat center;
+    background-size: 20px 15px;
+    width: 20px;
+    height: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 100px;
+    border: 5px solid $border-blue;
+
+    &::before {
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      width: 33px;
+      height: 33px;
+    }
+
+    &--search::before {
+      background: url("../img/1.png") no-repeat center;
+      background-size: 33px 33px;
+    }
+  
+    &--percent::before {
+      background: url("../img/2.png") no-repeat center;
+      background-size: 33px 33px;
+    }
+  
+    &--page::before {
+      background: url("../img/3.png") no-repeat center;
+      background-size: 31px 36px;
+      width: 31px;
+      height: 36px;
+    }
+  
+    &--email::before {
+      background: url("../img/4.png") no-repeat center;
+      background-size: 36px 29px;
+      width: 36px;
+      height: 29px;
+    }
+  
+    &--pay::before {
+      background: url("../img/5.png") no-repeat center;
+      background-size: 36px 26px;
+      width: 36px;
+      height: 26px;
+    }
+  }
+}
+
+.content-order__item-text {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: $white;
+  word-wrap: break-word;
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 20px;
+    word-wrap: break-word;
+    margin-bottom: 0;   
+  }
+}

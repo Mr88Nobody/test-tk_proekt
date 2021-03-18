@@ -1,0 +1,157 @@
+@import "../global/variables";
+
+.content-offer {
+   position: relative;
+   margin: 0;
+   margin-bottom: 0;
+   padding: 50px 20px 20px 20px;
+
+   &::before {
+    position: absolute;
+    content: "";
+    height: 650px;
+    width: 100vw;
+    background: url("../img/layer-9.jpg") no-repeat top;
+    background-size: cover;
+    z-index: -1;
+    right: 0;
+    top: -62px;
+   }
+
+   @media (min-width: $tablet-width) {
+     padding: 80px 10%;
+
+     &::before {
+       top: -99px;
+     }
+   }
+
+   @media (min-width: $desktop-width) {
+    padding: 132px 359px 190px 375px;
+
+    &::before {
+      height: 850px;
+      left: 0;
+    }
+  }
+}
+
+.content-offer__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: $black;
+  margin: 0 0 30px 0;
+
+  & span {
+    color: $blue;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    & br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 48px;
+    line-height: 64px;
+    margin-bottom: 50px;
+  }
+}
+
+.content-offer__text {
+  text-align: left;
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.content-offer__text-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black-2;
+  margin: 0;
+  margin-bottom: 18px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 2px;
+  }
+}
+
+.content-offer__item {
+  font-size: 16px;
+  line-height: 22px;
+  color: $black-2;
+  padding-left: 5px;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "-";
+    display: inline-block;
+    width: 1em;
+    margin-left: -5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 0;
+  }
+}
+
+.content-offer__button {
+  display: flex;
+  flex-direction: column;
+  
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.content-offer__btn {
+  margin: 0 auto;
+  min-width: 182px;
+  transition: background 0.3s;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--primary {
+    @include btn($white);
+    background-color: $blue;
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 10deg);
+    }
+  }
+
+  &--extra {
+    @include btn($black-2);
+    background-color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($white, 10deg);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-right: 27px;
+  }
+}

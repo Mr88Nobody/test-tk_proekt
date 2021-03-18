@@ -1,0 +1,335 @@
+@import "../global/variables";
+@import "../global/mixins";
+
+.form__wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    &--input {
+      flex-wrap: wrap;
+      columns: 2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 24px;
+
+    &--range {
+      align-items: flex-end;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+// Стиль для select
+
+.form__select {
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    min-width: 370px;
+  }
+}
+
+.form__select-wrap {
+  background-color: $white;
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  color: $black;
+  order: 1;
+  // transition: 0.4s ease;  
+
+  &--active {
+    max-height: 228px;
+    opacity: 1;
+    overflow-y: scroll;
+    background-color: transparentize($dark-grey, 0.1);
+    color: $white;
+    border: 1px solid $dark-grey;
+    position: absolute;
+
+    & + .form__select-selected {
+        color: $white;
+        background-color: $dark-grey;
+        border: 1px solid $dark-grey;
+        border-radius: 4px 4px 0 0;        
+        position: relative;
+
+        &:hover {
+          background-color: lighten($dark-grey, 10deg);
+        }
+    
+        &::after {
+          border-top: 1px solid $white;
+          border-right: 1px solid $white;
+        }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 7px;
+    background-color: $dark-grey; 
+    border-radius: 4px;
+    padding-right: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 7px;
+    background-color: $blue;
+    border-radius: 4px;
+  }
+}
+
+.form__select-selected {
+  font-size: 16px;
+  line-height: 22px;
+  padding: 12px 16px;
+  color: $black;
+  background-color: $white-2;
+  border: 1px solid $white;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: darken($white-2, 10deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid $black;
+    border-right: 1px solid $black;
+    right: 20px;
+    transform: rotate(135deg) translateY(-50%);
+  }
+}
+
+.form__select-option {
+  padding: 12px 16px;  
+  cursor: pointer;  
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
+
+.form__select-label {
+  cursor: pointer;
+}
+
+.form__select-radio {
+  display: none;
+}
+
+// Стили для input email, name
+
+.form__input {  
+  font-size: 16px;
+  line-height: 22px;
+  padding: 12px 16px;
+  color: $black;
+  background-color: $white-2;
+  border: 1px solid $white;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+
+  &:focus,
+  &:active {
+    border: 1px solid $blue;
+  }
+
+  &:hover {
+    background-color: darken($white-2, 10deg);
+  }  
+
+  @media (min-width: $tablet-width) {
+    min-width: 30%;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 370px;
+    margin-left: 0;
+  }
+}
+
+// Стили для range
+
+.form__range {
+  flex-basis: 100%;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 50%;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 65%;
+  }
+}
+
+.form__range-input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border: 1px solid $white;
+  border-radius: 4px;
+  background-color: $white-2;
+  outline: none;
+  padding: 0;
+  margin: 0;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: $blue;
+    border: 3px solid $border-blue;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: $blue;
+    border: 3px solid $border-blue;
+    cursor: pointer;
+  }
+}
+
+.form__range-desc {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__range-text {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+}
+
+// Стили для input file
+
+.form__file {
+  margin: 0 auto;
+  margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-left: 10px;
+    min-width: 30%;
+  }
+}
+
+.form__file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.form__file-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+  min-width: 240px;
+  border: 1px solid $blue;
+  background-color: $white;
+  padding: 10px 15px 10px 40px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: darken($white, 10deg);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 20px;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../img/page.png");
+  }  
+
+  @media (min-width: $desktop-width) {
+    min-width: 370px;
+    font-size: 15px;
+    line-height: 18px;
+    align-self: flex-end;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    &::before {
+      left: 90px;
+    }
+  }
+}
+
+
+// Стили для кнопки submit
+
+.form__btn {
+  @include btn($white);
+  background-color: $blue;
+  margin: 0 auto;
+  min-width: 182px;
+
+  &:hover {
+    background-color: darken($blue, 10deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    line-height: 22px;
+    min-width: 370px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}

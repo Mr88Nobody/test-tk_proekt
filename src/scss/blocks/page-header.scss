@@ -1,0 +1,54 @@
+@import "../global/variables";
+
+// Стили для header width - mobile
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 290px;
+  background-color: transparentize($dark-blue, 0.1);
+  padding: 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 39px 10%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 39px 359px 39px 375px;
+  }
+
+}
+
+// Стиль для обертки логотипа
+.page-header__logo {
+  margin-right: auto;
+}
+
+// Стиль для ссылки логотипа
+.page-header__logo-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: darken($white, 30deg);
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 28px;
+    line-height: 18px;
+  }
+}
+
+// Стиль для выделенной части логотипа
+.page-header__logo-color {
+  color: $blue;
+}

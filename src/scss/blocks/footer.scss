@@ -1,0 +1,234 @@
+@import "../global/variables";
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 10px 20px 5px 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 10%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 35px 359px 35px 375px;
+  }
+}
+
+// Стили для списка оплаты
+.footer__pay {
+  position: relative;
+  margin-bottom: 15px;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    background-color: $white;
+  }
+
+  &::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    margin: 0 20px;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 1px;
+      height: 20px;
+      background-color: $white;
+    }
+
+    &::before {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  
+    &::after {
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 40%;
+  }
+}
+
+.footer__pay-list {
+  position: relative;  
+  
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-around;
+    padding: 0 44px;    
+  }
+}
+
+
+.footer__pay-item {
+  padding: 5px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-right: 10px;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// Стили для списка контактов
+.footer__contacts {
+  width: 100%;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 25%;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 30%;
+  }
+}
+
+.footer__contacts-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__contacts-item {
+  padding: 5px 10px;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 5px;
+    margin: 0;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+// Стили для ссылок
+.footer__link {
+  font-size: 13px;
+  line-height: 18px;
+  display: flex;
+  text-decoration: none;
+
+  &--pay {
+    color: $grey-2;
+  }
+
+  &--contacts {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+// Стили иконок
+.footer__icon {
+  display: block;
+  width: 15px;
+  width: 17px;
+  margin-right: 1em;
+
+  &--qiwi {
+    background: url("../img/qiwi.png") no-repeat center;
+    background-size: 15px 15px;
+  }
+
+  &--yandex {
+    background: url("../img/yandex.png") no-repeat center;
+    background-size: 15px 15px;
+  }
+
+  &--web {
+    background: url("../img/web.png") no-repeat center;
+    background-size: 15px 15px;
+  }
+
+  &--mail {
+    background: url("../img/mail.png") no-repeat center;
+    background-size: 15px 15px;
+  }
+
+  &--vk {
+    background: url("../img/vk.png") no-repeat center;
+    background-size: 15px 15px;
+  }
+}
+
+// Стили для копирайта
+.footer__copy {
+  font-size: 13px;
+  line-height: 14px;
+  text-align: center;
+  color: $white;
+  margin: 0;
+  padding-top: 10px;
+  width: 100%;
+
+  & span {
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    padding-top: 0;
+    width: 25%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 30%;
+  }
+}
