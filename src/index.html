@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
   <title>Test</title>
 </head>
 
@@ -19,7 +20,7 @@
     </div>
 
     <!-- Меню -->
-    <nav class="main-nav">      
+    <nav class="main-nav">
       <ul class="main-nav__list main-nav__list--closed">
         <li class="main-nav__item">
           <a href="#" class="main-nav__link main-nav__link--active">Бизнес</a>
@@ -103,7 +104,7 @@
 
           <!-- Селект -->
           <div class="form__select">
-            <div class="form__select-wrap">
+            <div class="form__select-wrap" id="select-scroll">
               <div class="form__select-option">
                 <input type="radio" class="form__select-radio" id="1" name="category" />
                 <label class="form__select-label" for="1">Sed ut perspiciatis</label>
@@ -173,7 +174,7 @@
             <input class="form__range-input" type="range" name="range" id="range" aria-valuenow="0" aria-valuemin="0"
               aria-valuemax="100" min="0" max="100" value="75" step="1" role="slider">
           </div>
-          
+
           <!-- File -->
           <div class="form__file">
             <input type="file" name="file" id="file" class="form__file-input">
@@ -236,6 +237,7 @@
 
   </footer>
 
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 </body>
 
 </html>

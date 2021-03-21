@@ -1,0 +1,25 @@
+@import "./variables";
+
+.simplebar-scrollbar::before {
+  background-color: $blue;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-width: 7px;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
+}
+
+.simplebar-track {
+  background-color: $dark-grey;
+  max-width: 7px;
+  border-radius: 3px;  
+  margin-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}

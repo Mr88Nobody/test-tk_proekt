@@ -16,9 +16,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 39px 359px 39px 375px;
+    padding: 39px 15% 39px 15%;
   }
 
+  @media (min-width: $desktop-full-hd) {
+    padding: 39px 359px 39px 375px;
+  }
 }
 
 // Стиль для обертки логотипа
@@ -36,6 +39,7 @@
   color: $white;
   text-decoration: none;
   text-transform: uppercase;
+  transition: color 0.3s;
 
   &:hover,
   &:focus {

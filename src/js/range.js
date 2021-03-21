@@ -6,3 +6,7 @@ output.innerHTML = range.value;
 range.addEventListener('input', () => {
   output.innerHTML = range.value;
 })
+
+range.addEventListener('change', () => {
+  output.innerHTML = range.value;
+})

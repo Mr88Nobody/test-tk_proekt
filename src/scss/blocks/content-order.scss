@@ -1,6 +1,6 @@
 @import "../global/variables";
 
-// Блог оформления заказа
+// Стили для блога оформления заказа
 .content-order {
   padding: 40px 20px;
   background: url("../img/layer-13.png") no-repeat center;
@@ -11,11 +11,15 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 120px 15% 147px 15%;
+  }
+
+  @media (min-width: $desktop-full-hd) {
     padding: 120px 359px 147px 375px;
   }
 }
 
-// Заголовок
+// Стили для заголовка
 
 .content-order__title {
   font-weight: 700;
@@ -38,7 +42,7 @@
   }
 }
 
-// Текст после заголовка
+// Стили для текста после заголовка
 .content-order__text {
   font-size: 16px;
   line-height: 20px;
@@ -52,7 +56,7 @@
   }
 }
 
-// Схема оформления заказа
+// Стили для Схемы оформления заказа
 .content-order__list {
   display: flex;
   flex-wrap: wrap;
@@ -62,13 +66,19 @@
     flex-direction: row;
   }
 
-  @media (min-width: $desktop-width) {    
+  @media (min-width: $desktop-width) {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: repeat(5, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+    grid-gap: 10px;
+    gap: 10px;
     margin: 80px 0 76px 0;
-    flex-wrap: nowrap;
   }
 }
 
-
+// Стили для элементов схемы
 .content-order__item {
   display: flex;
   flex-direction: column;
@@ -79,11 +89,51 @@
     width: 20%;
   }
 
-  @media (min-width: $desktop-width) {   
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $grey;
+      top: 50px;
+      left: 80%;
+      box-shadow: 18px 0 0 0 $grey,
+                  36px 0 0 0 $grey,
+                  54px 0 0 0 $grey,
+                  72px 0 0 0 $grey;
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+
+    &:nth-child(1) {
+      -ms-grid-column: 1;
+    }
+    &:nth-child(2) {
+      -ms-grid-column: 2;
+    }
+    &:nth-child(3) {
+      -ms-grid-column: 3;
+    }
+    &:nth-child(4) {
+      -ms-grid-column: 4;
+    }
+    &:nth-child(5) {
+      -ms-grid-column: 5;
+    }
   }
 }
 
-// Декоративные элементы
+// Стили для Декоративных элементов
 .content-order__icon {
   display: inline-block;
   width: 45px;
@@ -181,6 +231,7 @@
   }
 }
 
+// Стили для текста Схемы
 .content-order__item-text {
   font-size: 12px;
   line-height: 16px;
@@ -189,6 +240,7 @@
   word-wrap: break-word;
 
   @media (min-width: $desktop-width) {
+    width: 100%;
     font-size: 16px;
     line-height: 20px;
     word-wrap: break-word;
