@@ -1,6 +1,6 @@
 @import "../global/variables";
 
-// Стили для блога оформления заказа
+// Blog order
 .content-order {
   padding: 40px 20px;
   background: url("../img/layer-13.png") no-repeat center;
@@ -19,7 +19,7 @@
   }
 }
 
-// Стили для заголовка
+// style title
 
 .content-order__title {
   font-weight: 700;
@@ -42,7 +42,7 @@
   }
 }
 
-// Стили для текста после заголовка
+//style text
 .content-order__text {
   font-size: 16px;
   line-height: 20px;
@@ -56,7 +56,7 @@
   }
 }
 
-// Стили для Схемы оформления заказа
+// Style sheme ordering
 .content-order__list {
   display: flex;
   flex-wrap: wrap;
@@ -78,7 +78,7 @@
   }
 }
 
-// Стили для элементов схемы
+// Style elements of sheme
 .content-order__item {
   display: flex;
   flex-direction: column;
@@ -133,7 +133,7 @@
   }
 }
 
-// Стили для Декоративных элементов
+// Style decorative elements
 .content-order__icon {
   display: inline-block;
   width: 45px;
@@ -231,7 +231,7 @@
   }
 }
 
-// Стили для текста Схемы
+// Style text of sheme elements
 .content-order__item-text {
   font-size: 12px;
   line-height: 16px;

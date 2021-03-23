@@ -4,22 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">  
   <title>Test</title>
 </head>
 
 <body class="page-body">
 
   <header class="page-header">
-    <!-- Логотип -->
+    <!-- Logo -->
     <div class="page-header__logo">
       <a href="index.html" class="page-header__logo-link">
         Loremipsum.<span class="page-header__logo-color">net</span>
       </a>
     </div>
 
-    <!-- Меню -->
+    <!-- Menu -->
     <nav class="main-nav">
       <ul class="main-nav__list main-nav__list--closed">
         <li class="main-nav__item">
@@ -35,7 +34,7 @@
           <a href="#" class="main-nav__link">Оформить заказ</a>
         </li>
       </ul>
-      <!-- Кнопка бургер меню -->
+      <!-- Button-burger menu -->
       <button class="main-nav__toggle">
         <span class="visually-hidden">Open Menu</span>
       </button>
@@ -44,15 +43,15 @@
   </header>
 
   <main class="page-main content">
-    <!-- Главный заголовок страницы -->
+    <!-- Main Title -->
     <h1 class="visually-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</h1>
-    <!-- Блог предложение -->
+    <!-- Blog Offer -->
     <section class="content-offer">
-      <!-- Заголовок блога -->
+      <!-- Title -->
       <h2 class="content-offer__title">
         <span>Lorem ipsum</span> dolor sit amet<br>consectetur <span>adipiscing</span>
       </h2>
-      <!-- Текст блога -->
+      <!-- Text -->
       <div class="content-offer__text">
         <p class="content-offer__text-title">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
         <ul class="content-offer__list">
@@ -62,19 +61,19 @@
         </ul>
       </div>
 
-      <!-- Кнопки блога -->
+      <!-- Buttons -->
       <div class="content-offer__button">
         <button class="content-offer__btn content-offer__btn--primary">Заказать</button>
         <button class="content-offer__btn content-offer__btn--extra">Подробнее</button>
       </div>
     </section>
 
-    <!-- Блог оформления заказа -->
+    <!-- Blog Order -->
     <section class="content-order">
-      <!-- Заголовок блога -->
+      <!-- Title -->
       <h2 class="content-order__title">Оформление <span> заказа</span></h2>
       <p class="content-order__text">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
-      <!-- Схема оформления заказа -->
+      <!-- Sheme ordering -->
       <ul class="content-order__list">
         <li class="content-order__item">
           <span class="content-order__icon content-order__icon--search"></span>
@@ -97,12 +96,13 @@
           <p class="content-order__item-text">Excepteur sint occaecat cupidatat non proident</p>
         </li>
       </ul>
-      <!-- Форма заказа -->
+      <!-- Form ordering -->
       <form action="#" method="POST" class="content-order__form form">
-        <!-- Обертка для input -->
+
+        <!-- Wrapper input -->
         <div class="form__wrap form__wrap--input">
 
-          <!-- Селект -->
+          <!-- Select -->
           <div class="form__select">
             <div class="form__select-wrap" id="select-scroll">
               <div class="form__select-option">
@@ -156,16 +156,18 @@
           </div>
 
           <!-- Email -->
-          <input type="email" id="email-client" name="email-client" class="form__input form__input--email"
-            placeholder="Ваш e-mail" aria-placeholder="Введите ваш e-mail" role="textbox" required>
+          <input type="email" id="email-client" name="email-client"
+            class="form__input form__input--email" placeholder="Ваш e-mail"
+            aria-placeholder="Введите ваш e-mail" role="textbox" required>
 
           <!-- Name -->
           <input type="text" id="name-client" name="name-client" class="form__input form__input--name"
             placeholder="Ваше имя" aria-placeholder="Введите ваше имя" role="textbox" required>
+
         </div>
 
         <div class="form__wrap form__wrap--range">
-          <!-- Ползунок -->
+          <!-- Slider-range -->
           <div class="form__range">
             <div class="form__range-desc">
               <p class="form__range-text">Sed ut perspiciatis, unde omnis iste natus</p>
@@ -193,7 +195,7 @@
     <!-- Copyright -->
     <p class="footer__copy"><span>© 2018 «LoremIpsum.net»</span> Все права защищены.</p>
 
-    <!-- Блог оплаты -->
+    <!-- Blog payments -->
     <div class="footer__pay">
       <ul class="footer__pay-list">
         <li class="footer__pay-item">
@@ -217,7 +219,7 @@
       </ul>
     </div>
 
-    <!-- Блог контакты -->
+    <!-- Blog contacts -->
     <div class="footer__contacts">
       <ul class="footer__contacts-list">
         <li class="footer__contacts-item">
@@ -235,9 +237,7 @@
       </ul>
     </div>
 
-  </footer>
-
-  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  </footer>  
 </body>
 
 </html>

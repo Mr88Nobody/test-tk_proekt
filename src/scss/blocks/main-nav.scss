@@ -1,8 +1,8 @@
 @import "../global/variables";
 
-// Стили для меню
+// Menu
 
-// Стили для обертки навигации
+// wrapper navigation
 .main-nav {
   width: 100%;
   position: relative;
@@ -12,7 +12,7 @@
   }
 }
 
-// Кнопка бургер
+// Button menu
 .main-nav__toggle {
   position: absolute;
   display: block;
@@ -37,17 +37,16 @@
   }
 }
 
-// Стиль для списка меню
+// Menu list
 .main-nav__list {
   display: flex;
   flex-direction: column;
   align-items: flex-end;  
   
-  // Стили для мобильного меню
+  // Mobile
   @media (max-width: $mobile-width-only) {
     position: absolute;
-    min-height: 100vh;    
-    // min-width: 70vw;
+    min-height: 100vh;
     top: 20px;
     background-color: transparentize($dark-blue, 0.1);
     padding-right: 20px;
@@ -68,7 +67,7 @@
     } 
   }   
 
-  // Стили для меню >768px
+  // Menu >768px
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: flex-end;
@@ -77,7 +76,7 @@
   }
 }
 
-// стили элемента меню
+// Menu element
 .main-nav__item {
   margin-top: 20px;
 
@@ -99,7 +98,7 @@
   }
 }
 
-// Стиль для ссылок
+// Links
 .main-nav__link {
   font-family: "Lato", "Arial", sans-serif;
   font-size: 26px;

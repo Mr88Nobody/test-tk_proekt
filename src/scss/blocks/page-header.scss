@@ -1,6 +1,6 @@
 @import "../global/variables";
 
-// Стили для header width - mobile
+// Style Header
 .page-header {
   display: flex;
   flex-direction: column;
@@ -24,12 +24,12 @@
   }
 }
 
-// Стиль для обертки логотипа
+// Logo
 .page-header__logo {
   margin-right: auto;
 }
 
-// Стиль для ссылки логотипа
+// Logo link
 .page-header__logo-link {
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
@@ -52,7 +52,7 @@
   }
 }
 
-// Стиль для выделенной части логотипа
+// Decorative logo element
 .page-header__logo-color {
   color: $blue;
 }

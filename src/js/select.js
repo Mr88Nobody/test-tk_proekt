@@ -6,13 +6,6 @@ selected.addEventListener('click', () => {
   selectWrap.classList.toggle('form__select-wrap--active')
 })
 
-// optionsList.forEach(el => {
-//   el.addEventListener('click', () => {
-//     selected.innerHTML = el.querySelector(".form__select-label").innerHTML
-//     selectWrap.classList.remove("form__select-wrap--active")
-//   })
-// })
-
 for (let i = 0; i < optionsList.length; i++) {
   const el = optionsList[i]
   el.addEventListener('click', () => {

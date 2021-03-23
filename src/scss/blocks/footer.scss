@@ -1,8 +1,8 @@
 @import "../global/variables";
 
-// Стили для футера
+// Style footer
 
-// Стили для обертки
+// Wrapper
 .footer {
   display: flex;
   flex-direction: column-reverse;
@@ -16,17 +16,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 35px 15% 35px 15%;
+    padding: 32px 15% 31px 15%;
   }
 
   @media (min-width: $desktop-full-hd) {
-    padding: 35px 359px 35px 375px;
+    padding: 32px 359px 31px 375px;
   }
 }
 
-// Стили для блога оплаты
+// Style payments
 
-// Стили обертки
+// wrapper
 .footer__pay {
   position: relative;
   margin-bottom: 15px;
@@ -86,7 +86,7 @@
   }
 }
 
-// Стили для списка
+// Style payments list
 .footer__pay-list {
   position: relative;  
   
@@ -103,7 +103,7 @@
   }
 }
 
-// Стили для элемента списка
+// Style payments element
 .footer__pay-item {
   padding: 5px;
 
@@ -117,9 +117,9 @@
   }
 }
 
-// Стили для блога контактов
+// Style contacts
 
-// Стили для обертки
+// Wrapper
 .footer__contacts {
   width: 100%;
   margin-bottom: 15px;
@@ -135,7 +135,7 @@
   }
 }
 
-// Стили для списка
+// Style contacts list
 .footer__contacts-list {
   display: flex;
   flex-direction: column;
@@ -151,7 +151,7 @@
   }
 }
 
-// Стили для элементов списка
+// Contacts element
 .footer__contacts-item {
   padding: 5px 10px;
   margin-bottom: 5px;
@@ -175,7 +175,7 @@
   }
 }
 
-// Стили для ссылок
+// Link
 .footer__link {
   font-size: 13px;
   line-height: 18px;
@@ -196,7 +196,7 @@
   }
 }
 
-// Стили для иконок
+// Style icons
 .footer__icon {
   display: block;
   width: 15px;
@@ -229,7 +229,7 @@
   }
 }
 
-// Стили для  блога копирайт
+// Style Сopyright
 .footer__copy {
   font-size: 13px;
   line-height: 14px;

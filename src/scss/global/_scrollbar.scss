@@ -1,5 +1,6 @@
 @import "./variables";
 
+// Style custom scroll-bar
 .simplebar-scrollbar::before {
   background-color: $blue;
   top: 0;
